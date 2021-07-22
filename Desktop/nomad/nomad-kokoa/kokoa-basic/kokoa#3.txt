@@ -1,0 +1,196 @@
+<div> <p>옆에는 무언각가 올수없음
+<span img a(link)는 가능->inline
+대부분 block임
+diplay를 통해 inline block설정가능 inline이면 height width못가짐
+box - margin box의 경계의 바깥에 있는공간 margin 0으로도 가능하고 left or up 만 줄수도있다
+padding box 안쪽	
+boarder box 경계
+ inline 은 height width 가 없어서  argin을 left right 만 가질수있고 padding은 다 가능
+위아랳 주고 싶으먄 blcok으로 바꾸면됌
+ class는 .
+id 는 #
+
+
+#3.10
+inline-block block인데 옆에올수있음 근데 old하고 문제가 많다
+해결책 부모 element에 diplay:flexbox쓰기
+justify-content = horizon
+align-items =cross 
+100vh view height 스크린상 비율 ->스크린 100%다
+diplay flex해주고 justify-content = horizon
+align-items 사용가능
+
+#3.11
+flex-direction : default is low can change coulm=>반대로 됌
+div 에 contents가있다 div에 diplay:flex박고 contents들 flex가능
+flex wrap쓰면 화먄따라 찌그러지지 않고 다른줄로 바뀜 inline block처럼
+reverse wrap  / flex-direction row-reversr등도 있으니 참고만
+
+#3.12
+2020.12.15.
+요약
+position fixed를 이용하면 스크롤해도 항상 제자리에 머무른다.
+처음 만들어진 자리에 고정 되어있다. 하지만 top, left, right, bottom 중 하나만 수정해도 서로 다른 레이어에 위치하게되어 원래 위치가 무시된다.
+positon fixed를 이용하면 가장 위에 위치하게 된다. (맨 앞)
+
+#3.13
+1. positon: static (default)
+2. position: fixed
+- element가 처음 생성된 자리에 고정.
+3. position: relative;
+- element가 '처음 생성된 위치'를 기준점으로, top bottom left right으로 위치를 조금씩 수정할 수 있다.
+4. position: absolute;
+가장 가까운 relative 부모를 기준으로 이동
+position:relative; 를 해주면 부모가 된다.
+없으면 body.
+
+#3.14
+pseudo selector
+좀더 세부적으로 엘리먼트를 선택해 주는 것!
+(기존 방법 : 태그, id w/#, class w/.)
+
+선택의 복잡한 과정을 pseudo selector로 가능함
+ex>
+div:first-child {
+background-color: tomato;
+}
+
+/* pseudo selector */
+div:last-child {
+background-color: teal;
+}
+id나 class를 따로 만드는것보다 이렇게 지정하는게 훨씬 좋은 방법이다.
+css에서만 선택을 하면 되니까! html코드를 고칠 필요가 없기 때문이다
+
+n번째 태그 수정하기 nth-child(n) 올ㅋ
+span:nth-child(2) {
+background-color: teal;
+}
+span:nth-child(even) { //or odd ( 홀수 )
+background-color: teal;
+}
+3n+1같은 식도 가능
+
+#3.15
+div의 바로 밑 자식에서 span을 찾아서 그것만 효과를 주는 방법
+1)
+div span {
+text-decoration : underline;
+}
+이렇게하면 div밑에 있는 모든 span이 효과를 가진다
+직접적인 부모가 아니어도 밑에있는 것들을 모두 css가 찾는다.
+
+2) div > span {
+text-decoration : underline;
+}
+이렇게하면 바로 밑!!! 을 찾게 되므로 바로 밑의 자식만 건들일수있게된다.
+
+형제에게 효과를 주는방법
+
+p + span {
+color: black;
+
+}
++ 를 사용하면 형제에게 영향을 끼칠 수 있다. cool
+
+
+※ > 를 사용하면 direct child를 찾고, + 를 사용하면 바로 코드상 밑에 있는 sibling을 찾게된다
+
+#3.16
+ "~"는 span이 p의 형제인데, 바로 뒤에 오지 않을 때 쓸 수 있다.
+- Attribute selectors 특성 선택자
+- 그냥 input과 required input이 있다면, input:required{}를 통해서, required input에만 속성을 적용시킬 수 있다.
+- input{} 을 통해, [input 이름]에 해당하는 input 속성을 따로 줄 수 있다.
+- 여기서, input[placeholder="First name"]은 First name에만 속성을 주지만, input[placeholder~="name"]은 name이 들어가는 모든 input에 속성을 부여할 수 있다.
+- "~="은 name을 포함하고 있다는 의미가 되는 것이다.
+- a[href$=".org"] → "$="는 ".org"로 끝나는 모든 anchor를 선택할 수 있다.
+- attribute selectors를 이용하면, class를 지정할 필요 없이 CSS만으로 각각의 속성을 부여해줄 수 있다.
+
+#3.17
+Active, hover, focus, focus-within, visited
+
+active 해당 요소를 마우스로 클릭했을 때 효과를 적용
+
+hover 마우스가 해당 요소 위를 지나갈 때 효과를 적용
+
+focus 키보드로 선택되었을 때 효과를 적용
+
+focus-within 부모 요소에게 적용. 자신의 자식 요소 중 하나가 focused되었을 때 효과를 적용
+
+visited 방문한 사이트일 경우에 효과를 적용
+
+조건을 나열해 여러 상황을 설정할 수 있음.
+예 high-tag:hover low-tag:focus{
+
+}
+인 경우, 상위 요소위에 마우스 커서가 있고, 하위 요소가 focused되었을 때 효과를 적용하게 된다.
+
+and 의 개념으로 받아드리면 될 것 같다.
+
+#3.18
+
+p span{} 부모자식관계
+p>span{} 부모와 바로 밑 자식관계
+p+span{} 바로 다음에 오는 형제관계
+p~span{} 바로 다음에 오지 않아도 되는 형제관계
+
+#attribute
+input[type="word"]{} type="word"인 input만을 선택
+input[type~="word"]{} "word"를 포함하는 input선택
+input[type$="word"]{} 끝에 "word"가 오는 input 선택
+input[type^="word"]{} 앞에 "word"가 오는 input 선택
+
+#state
+:hover 커서가 올라간상태
+:active 클릭할때
+:focus 키보드로 선택한경우
+:visited link에서 쓰이고 사이트를 방문한 이력이 있을경우
+:focus-within 자식들중 하나라도 focus상태에 있다면 부모가 바뀔때 쓰임
+
+#pseudo element
+::placeholder placehoder만을 꾸밀때 사용
+::selection 드래그 했을때
+::first-letter 앞 글자에
+::first-line 첫 줄
+
+#3.19
+Color
+color는 정말 css 에서중요하다
+css에서 알아야할 color system
+1) hexadecimal color (16진수 컬러)
+#000000 <
+2)RGB 방식
+-> 이건 디자이너들이 많이쓴다
+rgb(252,206,0); 이런식
+rgba (205,23,0, 0.5);
+4번째 숫자는 투명도를 말한다 !
+a 즉 알파는 투명도를 말하는 것이다
+
+Variable (custom properties )
+
+variable도 정말 중요하다 !!!
+이게 css를 프로그래밍언어처럼 보여준다
+프로그래밍언어는아니지만 그 장점을 보여주는것임
+
+:root 라는 엘리먼트에 변수를 추가하는 것이다
+:root은 기본적으로 모든 document의 뿌리가 되는 것이다
+출발점이 되는 것이다
+여기에 변수이름을 쓰고
+--main-color라고 변수이름을 주고
+이것을 document의 root에 저장하는것이다
+
+--를 써주고 변수이름을 써줘야한다
+변수는 -- 2개 그리고 변수이름
+빈공간이 있다면 -로 채워야한다.
+물론 컬러만 저장할 수 있는게 아니다!
+--default-border: 1px solde var(--main-color);
+
+
+그 다음 이 변수를 사용할 곳에
+p {
+background-color: var(--main-color);
+}
+a {
+background-color: var(--main-color);
+}
+이렇게 써주면됨!! how it is cool!

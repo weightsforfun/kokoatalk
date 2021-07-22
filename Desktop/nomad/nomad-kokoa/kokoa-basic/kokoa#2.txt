@@ -1,0 +1,27 @@
+#2.0~2.3
+<ul> -> unodered list list요소<li> dasdad</li> 
+<ol> -> odered list index넣어줌
+
+#2.4
+<a ->anchor을 의미한다 다른 사이트로 넘어가는 링크를 받아주므로 링크주소필요
+<a href="https://google.com">go to google</a>이런식 a의 attribute에는 target도있다
+target="blank"일 경우 링크를 새 탭에서 켜주고 "self"일 경우 현재 탭에서 링크를 열어줌
+<img 태그는 src (source)가 필요 src="이미지 주소"/>그리고 닫을때는 자체 태그에서 닫아준다
+
+#2.5<head>에서 <title>해주면 탭의 이름이 바뀐다.
+<link rel="short icon"으로 하면 탭제목 옆의 이미지가 생긴다 href로 이미지 넣어줘야함
+<og는 카카오톡 보낼때 미리보기 이미지 넣어주는 기능 head들은 이러한 부가적인거들 넣어줌
+
+#2.7,2.8
+다양한 form 들이 있다 input
+      <input required placeholder="Name" type="text" />
+      <input required placeholder="LastName" type="text" />
+      <input required placeholder="UserName" type="text" />
+      <input required placeholder="Password" type="passworld" />
+      <input type="submit" value="Create Account" />
+    </form>이런식 
+#2.9
+id 는 유일해야한다
+ #2.10
+senamatic사용 하려고 노력
+
