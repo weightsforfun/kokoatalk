@@ -1,0 +1,39 @@
+.nav {
+  background-color: #f9f9fa;
+  position: fixed;
+  bottom: 0;
+  padding: 20px 0;
+  border-top: 1px solid lightgray;
+  width: 100%;
+}
+.nav__ul {
+  display: flex;
+  justify-content: space-around;
+}
+.nav__link {
+  position: relative;
+  color: #2e363e;
+}
+.nav__chatnotification {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+  position: absolute;
+  right: -17px;
+}
+.nav__ellips__notification {
+  background-color: tomato;
+  display: flex;
+  width: 15px;
+  height: 15px;
+  border-radius: 7.5px;
+  position: absolute;
+  left: 50px;
+  top: -30px;
+}
