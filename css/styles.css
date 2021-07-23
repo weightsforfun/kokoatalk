@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Fuggles&display=swap");
+@import "reset.css";
+@import "status.css";
+body {
+  font-family: "Fuggles", cursive;
+  font-size: 30px;
+}
+.Welcome-header {
+  margin-top: 93px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.Welcome-header .Welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+.Welcome-header .Welcome-header__text {
+  margin-bottom: 50px;
+  width: 60%;
+  opacity: 0.6;
+}
+#LogIn-Form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px;
+}
+#LogIn-Form input {
+  padding: 15px 0px;
+  border: none;
+  font-size: 16px;
+  margin-bottom: 15px;
+  width: 60vh;
+}
+#LogIn-Form input:not([type="submit"]) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease-in-out;
+}
+
+#LogIn-Form input::placeholder {
+  color: rgba(0, 0, 0, 0.4);
+}
+#LogIn-Form input:focus {
+  border-color: yellow;
+}
+#LogIn-Form input[type="submit"] {
+  background-color: yellow;
+  cursor: pointer;
+  border-radius: 5px;
+}
+#LogIn-Form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 20px;
+}
