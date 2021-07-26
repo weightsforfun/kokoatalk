@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Friends screen on Kokoa Talk</title>
+    <title>More screen on Kokoa Talk</title>
   </head>
   <body>
     <div class="status-bar">
@@ -23,20 +23,18 @@
       </div>
     </div>
     <header class="screen__header">
-      <h1 class="screen__header__title">Friends</h1>
+      <h1 class="screen__header__title">More</h1>
       <div class="screen__header__icons">
         <span><i class="fas fa-search"></i></span>
         <span><i class="fas fa-music"></i></span>
-        <span><i class="fas fa-cog"></i></span>
+        <span>
+          <a href="setting.html">
+            <i class="fas fa-cog"> <span class="cog__badge badge"></span></i
+          ></a>
+        </span>
       </div>
     </header>
-
-    <a class="friend-display-link"
-      ><i class="fas fa-info-circle"></i>
-      Friend's Name Display
-      <i class="fas fa-chevron-right fa-xs"></i>
-    </a>
-    <main class="friends-screen">
+    <main class="more-screen">
       <div class="user-component">
         <div class="user-component__column">
           <img
@@ -45,46 +43,58 @@
           />
           <div class="user-component__text">
             <h4 class="user-component__name">Youn</h4>
-            <h6 class="user-component__subtitle">this text whatever</h6>
+            <h6 class="user-component__subtitle">
+              010-7367-4722
+              <i class="fas fa-exclamation-circle fa-xs"></i>
+            </h6>
           </div>
         </div>
-        <div class="user-component__column"></div>
+        <div class="user-component__column">
+          <i class="far fa-comment-alt fa-2x"></i>
+        </div>
       </div>
-      <div class="friends-screen__channel">
-        <div class="friends-screen__channel__header">
-          <span>channel</span>
-          <i class="fas fa-chevron-up fa-xs"></i>
+      <div class="icon-row">
+        <div class="icon-row__icon">
+          <i class="far fa-calendar-alt"></i>
+          <span>Calender</span>
         </div>
-        <div class="user-component">
-          <div class="user-component__column">
-            <img
-              class="user-component__avatar user-component__avatar--sm"
-              src="C:\Users\giyong\Pictures\Camera Roll\profile.jpg"
-            />
-            <div class="user-component__text">
-              <h4 class="user-component__name user-component__name--not-bold">
-                channel
-              </h4>
+        <div class="icon-row__icon">
+          <i class="far fa-smile"></i>
+          <span>Emoticons</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="fas fa-brush"></i>
+          <span>Theme</span>
+        </div>
+        <div class="icon-row__icon">
+          <i class="far fa-user-circle"></i>
+          <span>Acoount</span>
+        </div>
+      </div>
+      <div class="more-suggestion">
+        <div class="more-suggestion__title">suggestion</div>
+        <div class="more-suggestion__icons">
+          <div class="more-suggestion__icon">
+            <div class="more-suggestion__icon__image">
+              <i class="fas fa-quote-right"></i>
             </div>
+            <span class="more-suggestion__icon-text">KaKao Story</span>
           </div>
-          <div class="user-component__column">
-            <div>
-              <span> 2 </span>
-              <span>
-                <i class="fas fa-chevron-right fa-xs"></i>
-              </span>
+          <div class="more-suggestion__icon">
+            <div class="more-suggestion__icon__image">
+              <i class="fab fa-linux"></i>
             </div>
+            <span class="more-suggestion__icon-text">Linux</span>
           </div>
         </div>
       </div>
     </main>
-
     <nav class="nav">
       <ul class="nav__ul">
         <li class="nav__btn">
           <a href="friends.html" class="nav__link"
-            ><i class="fas fa-user fa-2x"></i
-          ></a>
+            ><i class="far fa-user fa-2x"></i>
+          </a>
         </li>
         <li class="nav__btn">
           <a href="chats.html" class="nav__link">

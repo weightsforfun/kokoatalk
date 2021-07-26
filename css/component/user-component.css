@@ -1,3 +1,7 @@
+.user-chats-list__link > .user-component {
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
 .user-component {
   justify-content: space-between;
 }
@@ -38,4 +42,11 @@
 
 .user-component__column:last-child {
   color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.user-component__time {
+  display: block;
+  margin-bottom: 10px;
 }

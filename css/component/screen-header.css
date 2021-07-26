@@ -3,6 +3,7 @@
   justify-content: space-between;
   padding: var(--horizontal-space);
   align-items: center;
+  margin-bottom: 10px;
 }
 .screen__header__title {
   font-size: 40px;
@@ -10,4 +11,15 @@
 }
 .screen__header__icons span {
   margin-left: 20px;
+  position: relative;
+}
+
+.cog__badge {
+  position: absolute;
+  display: flex;
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  left: 5px;
+  bottom: 35px;
 }

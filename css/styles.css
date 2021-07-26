@@ -1,14 +1,27 @@
 @import url("https://fonts.googleapis.com/css2?family=Fuggles&display=swap");
 @import "variables.css";
-@import "reset.css";
-@import "status.css";
-@import "login.css";
-@import "nav-bar.css";
-@import "user-component.css";
-@import "screen__header.css";
+/* component */
+@import "component/nav-bar.css";
+@import "component/user-component.css";
+@import "component/badge.css";
+@import "component/status.css";
+@import "component/screen-header.css";
+@import "component/alt-screen-header.css";
+@import "component/icon-row.css";
+/* screen */
 @import "friends.css";
+@import "reset.css";
+@import "login.css";
+@import "find.css";
+@import "more.css";
+@import "setting.css";
+@import "chat.css";
+
 body {
   font-family: "Fuggles", cursive;
   font-size: 30px;
   height: 1000vh;
+}
+.main-screen {
+  padding: 0px var(--horizontal-space);
 }
