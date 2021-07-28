@@ -17,6 +17,7 @@
 .nav__chatnotification {
   position: absolute;
   right: -17px;
+  animation: notificationAnimation 2s ease-in-out infinite;
 }
 .nav__ellips__notification {
   background-color: tomato;
@@ -27,4 +28,38 @@
   position: absolute;
   left: 50px;
   top: -30px;
+}
+@keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes appearBtnAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.nav__btn {
+  transform: translatey(50px);
+  opacity: 0;
+  animation: appearBtnAnimation 0.4s ease-in-out forwards;
+}
+.nav__btn:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.nav__btn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.nav__btn:nth-child(4) {
+  animation-delay: 0.9s;
 }

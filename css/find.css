@@ -95,3 +95,21 @@
 .open-post__photo__heartcount span {
   margin-left: 3px;
 }
+.open-post__photo__heartcount:hover i {
+  will-change: transform;
+  animation: heartbeat 1s linear infinite;
+}
+@keyframes heartbeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+  50% {
+    color: tomato;
+    transform: scale(5);
+  }
+  100% {
+    color: white;
+    transform: none;
+  }
+}
