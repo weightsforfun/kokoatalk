@@ -14,15 +14,6 @@
   position: relative;
 }
 
-.cog__badge {
-  position: absolute;
-  display: flex;
-  height: 8px;
-  width: 8px;
-  border-radius: 4px;
-  left: 5px;
-  bottom: 35px;
-}
 @keyframes rotateCog {
   from {
     transform: none;

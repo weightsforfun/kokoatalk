@@ -8,3 +8,21 @@
   align-items: center;
   color: white;
 }
+.cog__badge__more {
+  position: absolute;
+  display: flex;
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  left: 110px;
+  bottom: 30px;
+}
+.cog__badge__find {
+  position: absolute;
+  display: flex;
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  left: 65px;
+  bottom: 25px;
+}
