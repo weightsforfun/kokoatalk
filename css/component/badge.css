@@ -26,3 +26,12 @@
   left: 65px;
   bottom: 25px;
 }
+.cog__badge__chats {
+  position: absolute;
+  display: flex;
+  height: 8px;
+  width: 8px;
+  border-radius: 4px;
+  left: 160px;
+  bottom: 30px;
+}

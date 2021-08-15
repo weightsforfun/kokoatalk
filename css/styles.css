@@ -8,7 +8,8 @@
 @import "component/screen-header.css";
 @import "component/alt-screen-header.css";
 @import "component/icon-row.css";
-@import "component/nomobile.css"; /* screen */
+@import "component/nomobile.css";
+@import "component/nolandscape.css"; /* screen */
 @import "friends.css";
 @import "reset.css";
 @import "login.css";
