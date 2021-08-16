@@ -1,6 +1,6 @@
 #noLandscape {
-  position: absolute;
-  z-index: 99;
+  position: fixed;
+  z-index: 98;
   background-color: yellow;
   height: 120vh;
   width: 100vw;

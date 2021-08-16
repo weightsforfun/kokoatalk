@@ -1,5 +1,5 @@
 #noMobile {
-  position: absolute;
+  position: fixed;
   z-index: 99;
   background-color: yellow;
   height: 120vh;
