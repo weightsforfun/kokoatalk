@@ -37,6 +37,23 @@
     transform: rotateZ(360deg);
   }
 }
+@keyframes messagevibrate {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(0px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 .profile-animation {
   animation: profileTurn 2s;
 }
@@ -70,12 +87,16 @@
 .message__info {
   display: flex;
   align-items: flex-end;
+  margin-bottom: 15px;
 }
 .message__bubble {
   background-color: white;
   padding: 8px 10px;
   border-radius: 15px;
   border-top-left-radius: 3px;
+}
+.message__bubble:hover {
+  animation: messagevibrate 0.5s ease-in-out;
 }
 .message__time {
   opacity: 0.6;
